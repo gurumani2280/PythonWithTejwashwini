@@ -1,0 +1,8 @@
+Python is dynamically typed i.e., based on the value stored in the variable datatype type will be decided
+"type" function can be used to determine the datatype of any variable
+int , BOOL , float , str - datataypes covered
+List
+print() is used to print anything on the console
+input() is used to take input from the console - it should be in the form of string internally
+arithematic operations + - / % * // **
+Boolean operators - AND OR == != > >= < <=

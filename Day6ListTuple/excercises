@@ -1,0 +1,7 @@
+1. write down all the functions of list and tuple and their functionalities
+2. take a user input string and find out how many unique vowles are there
+3. print sum of all  numbers from inside as list of numbers - done
+4. print sum of all odd numbers from the list of numbers
+5. print sum of all even numbers from the list of numbers
+6. write a pgm to ask user input number till user wants . keep asking if he wants to add more numbers. print count and list of
+positive and negative numbers and zeroes entered by the user

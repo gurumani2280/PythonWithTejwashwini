@@ -1,0 +1,5 @@
+print("Hello World")
+name = input("please enter your name")
+#name = input()
+print("hello",name)
+print(type(name))

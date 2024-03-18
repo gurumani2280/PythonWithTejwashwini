@@ -1,0 +1,9 @@
+1 . Enter 3 numbers from user and print there average
+2.  print sum of all odd numbers from 1 to n
+3.  take radius as user input and print the circumference of the circle
+4.  take age as user input and print if that user is eligible for voting or not
+5.  write a pgm to ask user input number till user wants . keep asking if he wants to add more numbers. print count of
+positive and negative numbers and zeroes entered by the user
+6 . take two user inputs x and y and print x to the power of y
+7. take two user input numbers and find the GCD of two numbers
+8. take user input n and print the n fibonacci numbers

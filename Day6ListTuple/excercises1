@@ -1,0 +1,12 @@
+1. write down all the functions of list and tuple and their functionalities
+list functions:
+a = [1,2,3]
+list functions:
+index() - fetches the specified index value
+count() -it gives count of the number of times the value is present in the list
+pop() -  pop () removes the last element from the list . when pop(1) , removes the index(1) value
+clear() - clear() removes all the elements of the list
+copy() -
+remove() - give the value to remove from the list
+insert() - used to insert the required value into the list
+append() - adds the value at the end of the list
