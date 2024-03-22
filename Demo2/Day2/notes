@@ -1,0 +1,6 @@
+xpath :
+1. //table/a  -> in the entire html code it will search for table tag, and then it will identify the immediate child having tag 'a'
+2.//table//a  -> in the entire html code it will search for table tag, and then it will identify all the child(granchildren) tags having tag 'a'
+3.//input -> it will search for the input tag in the entire html code
+4. //h1[text()='Downloads']//following-sibling::p
+5. //p//preceding-sibling::h1
