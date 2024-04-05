@@ -1,2 +1,39 @@
 Install pip install pytest 
 pip install pytest-html
+
+1. auto discovery of pythin file , test function and test class will happen
+2. python file should sart with test_*.py or *_test.py
+3. functions should start with test eg : test login()
+4. class name should start with Test eg: Test login 
+5. how to run test case with a specific method name?
+   pytest -v -s -k "method name"
+   eg : pytest -v -s -k "login"
+   here it will run all the test functions/methods having "login" in their method/function name
+6. creating marker is better way of doing the selective running 
+   eg: on top of method @pytest.mark.smoke
+   while running pytest -m "smoke"
+we can give multiple marker to a function 
+eg : 
+    @pytest.mark.login
+    @pytest.mark.smoke
+    def test_loginwithvalidusers(self):
+        print("Login with valid users")
+eg : we can run this by giving pytest -m "smoke and login" -v -s
+
+pytest -m "smoke or login"
+pytest -m "not smoke"
+pytest -m "not login"
+
+7. how to use fixtures in pytest?
+use @pytest.fixture
+    def setup():
+       print("before method")
+       yield
+       print("after method")
+fixture name should be passed as an argument to the test method
+fixtures are used as a setup (before method) and tear down(after method) using yield keyword or statement
+before yield will be executed before test method and statements presebt after yield will be executed after test method is run
+
+instead of keeping fixture in a file , we can keep it inside a directory inside a file conftest.py so that it will be available to all the files inside
+that particulat directory
+eg : pytest NewDemo2/ -v -s
