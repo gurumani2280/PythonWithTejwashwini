@@ -1,0 +1,71 @@
+https://www.geeksforgeeks.org/what-is-the-difference-between-pythons-module-package-and-library/
+https://docs.pytest.org/en/7.1.x/how-to/fixtures.html
+
+How to use fixtures
+1. “Requesting” fixtures
+e.g. 
+
+@pytest.fixture
+def fruit_bowl():
+    print("in before  fixture fruit_bowl")
+    return ["apple", "banana"]
+
+def test_fruit_salad2(fruit_bowl):
+    print("in test_fruit_salad")
+    print(fruit_bowl)
+    assert "apple" in fruit_bowl
+    print("end test_fruit_salad")
+
+In this example, test_fruit_salad “requests” fruit_bowl (i.e. def test_fruit_salad(fruit_bowl):), 
+and when pytest sees this, it will execute the fruit_bowl fixture function and 
+pass the object it returns into test_fruit_salad as the fruit_bowl argument.
+
+=============--------------------***********-***********--------------------=============
+When we run our tests, we’ll want to make sure they clean up after themselves so they don’t mess with any other tests
+Fixtures in pytest offer a very useful teardown system, which allows us to define the specific steps necessary for each fixture to clean up after itself.
+
+Teardown/Cleanup (AKA Fixture finalization)
+
+1. return is swapped out for yield.
+2. Any teardown code for that fixture is placed after the yield
+“Yield” fixtures yield instead of return. 
+With these fixtures, we can run some code and pass an object back to the requesting fixture/test, just like with the other fixtures.
+e.g.
+@pytest.fixture
+def fruit_bowl2():
+    print("in before  fixture fruit_bowl")
+    yield ["apple", "banana"]
+    print("in after  fixture fruit_bowl")
+
+
+
+def test_fruit_salad2(fruit_bowl2):
+    print("in test_fruit_salad")
+    print(fruit_bowl2)
+    assert "apple" in fruit_bowl2
+    print("end test_fruit_salad")
+
+In this example, test_fruit_salad2 “requests” fruit_bowl2 (i.e. def test_fruit_salad2(fruit_bowl2):), 
+and when pytest sees this, it will execute the fruit_bowl2 fixture function and 
+pass the object it yiled into test_fruit_salad as the fruit_bowl argument.
+after test_fruit_salad2 completes execution , remaining lines in fruit_bowl2 fixture function will execute
+
+
+we can put the fixture function into a separate conftest.py file 
+so that tests from multiple test modules in the directory can access the fixture function
+e.g. we can create conftest.py and put fruit_bowl fixture function so that it can be accessed by all modules 
+
+and practise scope in conftest with selenium code
+
+2. Fixture scopes- Possible values for scope are: function, class, module, package or session.
+Fixtures are created when first requested by a test, and are destroyed based on their scope:
+
+function: the default scope, the fixture is destroyed at the end of the test.
+class   : the fixture is destroyed during teardown of the last test in the class.
+module  : the fixture is destroyed during teardown of the last test in the module.
+package : the fixture is destroyed during teardown of the last test in the package.
+session : the fixture is destroyed at the end of the test session.
+
+Note
+Pytest only caches one instance of a fixture at a time, 
+which means that when using a parametrized fixture, pytest may invoke a fixture more than once in the given scope.
