@@ -1,0 +1,19 @@
+Vitual environment comands
+how to maintain versions - and how to ensure your felloprogrammer also uses same version
+isolated environment, which is different from global environment
+
+1. create venv -> python -m venv myenv
+2. change dir  -> cd myenv/Scripts
+3. activate venv -> \Proj2\myenv\Scripts>activate.bat
+	C:\Users\App1>.\venv\Scripts\activate
+
+	(venv) C:\Users\App1>
+4. deactivate -> \Proj2\myenv\Scripts>deactivate.bat
+	(myenv) C:\Users\Proj2>.\myenv\Scripts\deactivate.bat
+	C:\Users\Proj2>
+5. installed packages -> pip list
+6. inatalling from requirements.txt 
+		-> (myenv) C:\Users\Proj2>pip install -r requirements.txt
+7. creating requirements file
+		-> (venv) C:\Users\App1\venv\Scripts>pip freeze > requirements.txt
+
