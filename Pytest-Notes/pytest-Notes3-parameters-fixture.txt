@@ -1,0 +1,52 @@
+PyTest Testdata Parameter Passing Marker, Fixture 
+Mark: https://docs.pytest.org/en/6.2.x/parametrize.html
+Fixture: https://docs.pytest.org/en/6.2.x/fixture.html#fixture-parametrize
+
+pytest enables test parametrization at several levels:
+
+1. pytest.fixture() allows one to parametrize fixture functions.
+2. @pytest.mark.parametrize allows one to define multiple sets of arguments and fixtures at the test function or class.
+
+
+# content of test_ids.py
+import pytest
+
+
+@pytest.fixture(params=[0, 1], ids=["spam", "ham"])
+def a(request):
+    return request.param
+
+
+def test_a(a):
+    pass
+
+
+def idfn(fixture_value):
+    if fixture_value == 0:
+        return "eggs"
+    else:
+        return None
+
+
+@pytest.fixture(params=[0, 1], ids=idfn)
+def b(request):
+    return request.param
+
+
+def test_b(b):
+    pass
+
+@pytest.fixture(params=[0, 1])
+def c(request):
+    return request.param
+
+
+def test_c(c):
+    print("c", c)
+
+practise with selenium code, like passing url and expected title as parameter
+
+
+
+
+
