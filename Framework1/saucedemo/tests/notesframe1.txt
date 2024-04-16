@@ -1,0 +1,36 @@
+create a fixture in conftest.py like below :
+@pytest.fixture(scope="class")
+def initialisation(request):
+    driver = webdriver.Chrome()
+    driver.maximize_window()
+    driver.implicitly_wait(10)
+    driver.get("https://www.saucedemo.com/v1/")
+    request.cls.driver = driver
+    yield
+    driver.quit()
+** imp lines are line 2 - @pytest.fixture(scope="class")
+                 line 8 - request.cls.driver = driver
+                 line 9 - yield
+
+In our test class we should use this fixture and use fixture name on top if the test method
+eg :
+@pytest.mark.usefixtures("initialisation")
+class TestLogin2:
+    @pytest.mark.frame1
+    def test_login2(self):
+
+        self.driver.find_element(By.NAME, "user-name").send_keys("standard_user")
+
+** imp line here is line 17 - @pytest.mark.usefixtures("initialisation")
+                    line 19 and line 20 - def test_login2(self):
+                    line 22 - self.driver.find_element(By.NAME, "user-name").send_keys("standard_user")
+
+how to run test cases paralelly ?
+pip install pytest-xdist
+pytest -n=<num>
+
+page classes :
+
+
+similar excercise for orange hrm website - logon , logout ,
+in sauce demo / orange hrm
