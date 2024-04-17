@@ -3,6 +3,8 @@ using environment variable
 export BROWSER=chrome
 set BROWSER=chrome
 
+no space after variable name  not like set BROWSER = chrome, it creates another variable with space
+
 import os
 var_name =os.environ.get("BROWSER", "firefox")
 
