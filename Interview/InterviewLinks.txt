@@ -1,0 +1,14 @@
+https://www.datacamp.com/blog/top-python-interview-questions-and-answers
+
+https://www.pavantestingtools.com/2019/04/python-interview-questions-and-answers.html
+https://github.com/Tanu-N-Prabhu/Python/tree/master/Python%20Coding%20Interview%20Prep
+https://www.prepbytes.com/blog/python/top-20-coding-questions-for-basic-python-programming/
+
+
+https://www.pavantestingtools.com/2023/04/selenium-with-python-interview-questions.html
+https://www.besanttechnologies.com/selenium-with-python-interview-questions-and-answers
+https://testbook.com/interview/python-selenium-interview-questions
+
+https://www.lambdatest.com/learning-hub/pytest-interview-questions
+https://www.javainuse.com/interview/pytest
+
