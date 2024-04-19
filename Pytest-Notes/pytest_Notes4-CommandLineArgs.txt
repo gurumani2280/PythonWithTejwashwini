@@ -37,3 +37,5 @@ def cmdopt(request):
 pytest -q test_sample.py
 
 pytest -q --cmdopt=type2
+
+we should be in the same package where we have the conftest.py file to run the method
