@@ -15,6 +15,12 @@ class HomePage(HomePageLocators):
     def getlogout_menu(self):
         return self.driver.find_element(*HomePage.logout_menu)
 
+    def get_backpack_addtocart(self):
+        return self.driver.find_element(*HomePageLocators.backpack_addtocart)
+
+    def get_cart_logo(self):
+        return self.driver.find_element(*HomePageLocators.cart_logo)
+
     def waitforopenmenutobevisible(self):
         wait = WebDriverWait(self.driver, 10)
         wait.until(expected_conditions.visibility_of(self.get_openmenu()))
@@ -29,6 +35,12 @@ class HomePage(HomePageLocators):
         wait.until(expected_conditions.visibility_of(self.getlogout_menu()))
         assert self.getlogout_menu().is_displayed() , "logout menu is not displayed"
 
+    def click_backpack_addtocart(self):
+        self.get_backpack_addtocart().click()
+
+    def click_cart_logo(self):
+        self.get_cart_logo().click()
+
     def click_logout(self):
         self.waitforlogoutmenutobevisible()
         self.getlogout_menu().click()
@@ -36,4 +48,7 @@ class HomePage(HomePageLocators):
     def logout(self):
         self.click_openmenu()
         self.click_logout()
+
+
+
 
