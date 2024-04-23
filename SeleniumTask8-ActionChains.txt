@@ -1,0 +1,8 @@
+https://www.selenium.dev/selenium/docs/api/py/webdriver/selenium.webdriver.common.action_chains.html
+https://www.geeksforgeeks.org/action-chains-in-selenium-python/
+https://www.tutorialspoint.com/action-chains-in-selenium-python
+this has good example link for lot of methods
+
+https://www.tutorialspoint.com/how-can-i-perform-mouse-hover-action-in-selenium-python
+website to to mouse hover operation - https://the-internet.herokuapp.com/jqueryui/menu#
+
