@@ -1,0 +1,21 @@
+list of built in exception
+https://docs.python.org/3/library/exceptions.html
+
+print(dir(locals()['__builtins__']))
+
+
+https://www.w3schools.com/python/python_try_except.asp
+
+
+https://www.programiz.com/python-programming/exceptions
+https://www.programiz.com/python-programming/exception-handling
+https://www.programiz.com/python-programming/user-defined-exception
+
+
+https://realpython.com/python-exceptions/
+
+https://www.tutorialspoint.com/python/python_exceptions.htm
+https://www.tutorialspoint.com/python/python_builtin_exceptions.htm
+https://www.tutorialspoint.com/python/python_raising_exceptions.htm
+https://www.tutorialspoint.com/python/python_tryexcept_block.htm
+https://www.tutorialspoint.com/python/python_tryfinally_block.htm
