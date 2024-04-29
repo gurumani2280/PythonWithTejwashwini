@@ -1,0 +1,4 @@
+1. what is nosuchelement exception and staleelement exception in python?
+2. explain pytest framework - how to run TCs paralleley using pytest commands
+3. Azure concepts - how do you do test management using azure?
+4. Regarding current projects and roles and responsibilities
