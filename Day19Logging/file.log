@@ -1,0 +1,14 @@
+2024-04-30 07:49:19,150 - __main__ - WARNING - __main__ This will get logged to a file
+2024-04-30 07:49:19,151 - __main__ - WARNING - Watch out!
+2024-04-30 07:49:19,151 - __main__ - ERROR - This is an error message
+2024-04-30 07:49:19,151 - __main__ - CRITICAL - This is a critical message
+2024-04-30 07:52:43,956 - __main__ - WARNING - __main__ This will get logged to a file
+2024-04-30 07:52:43,956 - __main__ - WARNING - Watch out!
+2024-04-30 07:52:43,956 - __main__ - ERROR - This is an error message
+2024-04-30 07:52:43,956 - __main__ - CRITICAL - This is a critical message
+2024-04-30 07:55:23,858 - __main__ - WARNING - __main__ This will get logged to a file
+2024-04-30 07:55:23,858 - __main__ - DEBUG - This is debug message
+2024-04-30 07:55:23,859 - __main__ - INFO - I told you so
+2024-04-30 07:55:23,859 - __main__ - WARNING - Watch out!
+2024-04-30 07:55:23,859 - __main__ - ERROR - This is an error message
+2024-04-30 07:55:23,859 - __main__ - CRITICAL - This is a critical message

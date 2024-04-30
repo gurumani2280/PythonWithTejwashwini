@@ -1,0 +1,13 @@
+2024-04-30 07:41:18,057 - 7140 - root - WARNING - __main__ This will get logged to a file
+2024-04-30 07:41:18,057 - 7140 - root - DEBUG - This is debug message
+2024-04-30 07:41:18,057 - 7140 - root - INFO - I told you so
+2024-04-30 07:41:18,057 - 7140 - root - WARNING - Watch out!
+2024-04-30 07:41:18,058 - 7140 - root - ERROR - This is an error message
+2024-04-30 07:41:18,058 - 7140 - root - CRITICAL - This is a critical message
+2024-04-30 07:41:18,058 - 7140 - root - ERROR - Exception occurred
+Traceback (most recent call last):
+  File "C:\Users\Admin\PycharmProjects\PythonTesting\Day19Logging\Test5.py", line 15, in <module>
+    c = a / b
+        ~~^~~
+ZeroDivisionError: division by zero
+2024-04-30 07:41:18,063 - 7140 - root - WARNING - __main__ This will get logged to a file
