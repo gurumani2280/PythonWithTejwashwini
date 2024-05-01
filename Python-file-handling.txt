@@ -24,3 +24,6 @@ seek(offset,from=SEEK_SET)	Changes the file position to offset bytes, in referen
 tell()				Returns an integer that represents the current position of the file's object
 write(s)			Writes a string to the file 
 writelines(lines)		Writes a list of lines to the file
+
+
+https://www.freecodecamp.org/news/file-handling-in-python/
