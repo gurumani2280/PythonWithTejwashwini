@@ -1,3 +1,5 @@
 https://realpython.com/python-logging/
 
 https://docs.python.org/3/howto/logging.html
+
+https://www.geeksforgeeks.org/python-how-to-get-function-name/
