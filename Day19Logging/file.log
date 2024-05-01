@@ -1,14 +1,42 @@
-2024-04-30 07:49:19,150 - __main__ - WARNING - __main__ This will get logged to a file
-2024-04-30 07:49:19,151 - __main__ - WARNING - Watch out!
-2024-04-30 07:49:19,151 - __main__ - ERROR - This is an error message
-2024-04-30 07:49:19,151 - __main__ - CRITICAL - This is a critical message
-2024-04-30 07:52:43,956 - __main__ - WARNING - __main__ This will get logged to a file
-2024-04-30 07:52:43,956 - __main__ - WARNING - Watch out!
-2024-04-30 07:52:43,956 - __main__ - ERROR - This is an error message
-2024-04-30 07:52:43,956 - __main__ - CRITICAL - This is a critical message
-2024-04-30 07:55:23,858 - __main__ - WARNING - __main__ This will get logged to a file
-2024-04-30 07:55:23,858 - __main__ - DEBUG - This is debug message
-2024-04-30 07:55:23,859 - __main__ - INFO - I told you so
-2024-04-30 07:55:23,859 - __main__ - WARNING - Watch out!
-2024-04-30 07:55:23,859 - __main__ - ERROR - This is an error message
-2024-04-30 07:55:23,859 - __main__ - CRITICAL - This is a critical message
+2024-05-01 07:34:10,411 - Test9 - WARNING - Test9 This will get logged to a file
+2024-05-01 07:34:10,412 - Test9 - DEBUG - This is debug message
+2024-05-01 07:34:10,412 - Test9 - INFO - I told you so
+2024-05-01 07:34:10,412 - Test9 - WARNING - Watch out!
+2024-05-01 07:34:10,413 - Test9 - ERROR - This is an error message
+2024-05-01 07:34:10,413 - Test9 - CRITICAL - This is a critical message
+2024-05-01 07:35:57,423 - Test9 - WARNING - Test9 This will get logged to a file
+2024-05-01 07:35:57,424 - Test9 - DEBUG - This is debug message
+2024-05-01 07:35:57,424 - Test9 - INFO - I told you so
+2024-05-01 07:35:57,425 - Test9 - WARNING - Watch out!
+2024-05-01 07:35:57,425 - Test9 - ERROR - This is an error message
+2024-05-01 07:35:57,425 - Test9 - CRITICAL - This is a critical message
+2024-05-01 07:40:15,533 - test_logger - WARNING - test_logger This will get logged to a file
+2024-05-01 07:40:15,534 - test_logger - DEBUG - This is debug message
+2024-05-01 07:40:15,535 - test_logger - INFO - I told you so
+2024-05-01 07:40:15,535 - test_logger - WARNING - Watch out!
+2024-05-01 07:40:15,536 - test_logger - ERROR - This is an error message
+2024-05-01 07:40:15,536 - test_logger - CRITICAL - This is a critical message
+2024-05-01 07:40:15,542 - test_logger - WARNING - test_logger This will get logged to a file
+2024-05-01 07:40:15,542 - test_logger - WARNING - test_logger This will get logged to a file
+2024-05-01 07:40:15,544 - test_logger - DEBUG - This is debug message
+2024-05-01 07:40:15,544 - test_logger - DEBUG - This is debug message
+2024-05-01 07:40:15,544 - test_logger - INFO - I told you so
+2024-05-01 07:40:15,544 - test_logger - INFO - I told you so
+2024-05-01 07:40:15,544 - test_logger - WARNING - Watch out!
+2024-05-01 07:40:15,544 - test_logger - WARNING - Watch out!
+2024-05-01 07:40:15,545 - test_logger - ERROR - This is an error message
+2024-05-01 07:40:15,545 - test_logger - ERROR - This is an error message
+2024-05-01 07:40:15,547 - test_logger - CRITICAL - This is a critical message
+2024-05-01 07:40:15,547 - test_logger - CRITICAL - This is a critical message
+2024-05-01 07:42:16,767 - test_logger3 - WARNING - test_logger This will get logged to a file
+2024-05-01 07:42:16,768 - test_logger3 - DEBUG - This is debug message
+2024-05-01 07:42:16,768 - test_logger3 - INFO - I told you so
+2024-05-01 07:42:16,769 - test_logger3 - WARNING - Watch out!
+2024-05-01 07:42:16,769 - test_logger3 - ERROR - This is an error message
+2024-05-01 07:42:16,869 - test_logger3 - CRITICAL - This is a critical message
+2024-05-01 07:42:16,872 - test_logger4 - WARNING - test_logger This will get logged to a file
+2024-05-01 07:42:16,872 - test_logger4 - DEBUG - This is debug message
+2024-05-01 07:42:16,873 - test_logger4 - INFO - I told you so
+2024-05-01 07:42:16,873 - test_logger4 - WARNING - Watch out!
+2024-05-01 07:42:16,874 - test_logger4 - ERROR - This is an error message
+2024-05-01 07:42:16,874 - test_logger4 - CRITICAL - This is a critical message
