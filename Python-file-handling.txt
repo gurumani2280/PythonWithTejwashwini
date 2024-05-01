@@ -1,0 +1,26 @@
+a file operation can be done in the following order.
+
+1. Open a file
+2. Read or write - Performing operation
+3. Close the file
+
+Different Modes to Open a File in Python
+
+Mode	Description
+r	Open a file in reading mode (default)
+w	Open a file in writing mode
+x	Open a file for exclusive creation 
+a	Open a file in appending mode (adds content at the end of the file)
+t	Open a file in text mode (default)
+b	Open a file in binary mode
++	Open a file in both read and write mode
+
+Here is the complete list of methods in text mode with a brief description:
+
+Method				Description
+close()				Closes an opened file
+read(n)				Reads the file content
+seek(offset,from=SEEK_SET)	Changes the file position to offset bytes, in reference to from (start, current, end)
+tell()				Returns an integer that represents the current position of the file's object
+write(s)			Writes a string to the file 
+writelines(lines)		Writes a list of lines to the file
