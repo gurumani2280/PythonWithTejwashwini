@@ -24,6 +24,14 @@ click login button
 4 . capture error message - 
 Invalid credentials
 
+scenario 3:
+
+1. login
+2. click on admin menu in the left
+3. add new user -> enrer details and create a new user
+4. search the above created user
+5. edit / delete an user
+
 
 
 

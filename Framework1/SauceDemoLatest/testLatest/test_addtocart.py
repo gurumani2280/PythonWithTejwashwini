@@ -3,6 +3,7 @@ import time
 import pytest
 
 from SauceDemoLatest.pagesLatest.addtocart import AddToCart
+from SauceDemoLatest.pagesLatest.checkout_overview_page import CheckoutOverviewPage
 from SauceDemoLatest.pagesLatest.home_page import HomePage
 from SauceDemoLatest.pagesLatest.login_page import LoginPage
 from SauceDemoLatest.pagesLatest.your_cart_page import YourCartPage
@@ -29,10 +30,13 @@ class TestLogin4(TestBase):
         time.sleep(2)
         ycp.type_zipcode('560079')
         time.sleep(2)
-
-        # atc = AddToCart(self.driver)
-        # atc.element_required()
-        # atc.add_to_cart_btn()
-        # atc.cart_icon()
-        # atc.checkout_bt()
+        # ycp.click_checkout_btn()
+        # time.sleep(2)
+        # ycp.click_cancel_btn()
+        # time.sleep(2)
+        ycp.click_continue_btn()
+        time.sleep(1)
+        cop = CheckoutOverviewPage(self.driver)
+        # cop.click_cancel_btn()
+        cop.click_finish_btn()
         time.sleep(2)
