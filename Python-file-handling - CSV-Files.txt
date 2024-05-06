@@ -1,0 +1,153 @@
+https://www.geeksforgeeks.org/reading-and-writing-csv-files-in-python/
+https://realpython.com/python-csv/
+https://docs.python.org/3/library/csv.html
+https://www.programiz.com/python-programming/csv
+
+The CSV (Comma Separated Values) format is a common and straightforward way to store tabular data. 
+To represent a CSV file, it should have the .csv file extension.
+
+A CSV file stores tabular data in which each data field is separated by a delimiter(comma in most cases). 
+To represent a CSV file, it must be saved with the .csv file extension.
+
+
+Writing to a CSV file
+To write to a CSV file, we first open the CSV file in WRITE mode. The file object is converted to csv.
+writer object and further operations takes place. Code and detailed explanation is given below.
+
+# importing the csv module
+import csv
+# field names .i.e. 1st row header
+fields = ['Name', 'Branch', 'Year', 'CGPA']
+# data rows of csv file
+rows = [['Nikhil', 'COE', '2', '9.0'],
+        ['Sanchit', 'COE', '2', '9.1'],
+        ['Aditya', 'IT', '2', '9.3'],
+        ['Sagar', 'SE', '1', '9.5'],
+        ['Prateek', 'MCE', '3', '7.8'],
+        ['Sahil', 'EP', '2', '9.1']]
+# name of csv file
+filename = "university_records.csv"
+# writing to csv file
+with open(filename, 'w', newline='') as csvfile:
+    # creating a csv writer object
+    csvwriter = csv.writer(csvfile)
+    # writing the fields
+    csvwriter.writerow(fields)
+    # writing the data rows
+    csvwriter.writerows(rows)
+
+
+Writing a dictionary to a CSV file
+To write a dictionary to a CSV file, the file object (csvfile) is converted to a DictWriter object. Detailed example with explanation and code is given below.
+
+# importing the csv module
+import csv
+
+# my data rows as dictionary objects
+mydict = [{'branch': 'COE', 'cgpa': '9.0',
+		'name': 'Nikhil', 'year': '2'},
+		{'branch': 'COE', 'cgpa': '9.1',
+		'name': 'Sanchit', 'year': '2'},
+		{'branch': 'IT', 'cgpa': '9.3',
+		'name': 'Aditya', 'year': '2'},
+		{'branch': 'SE', 'cgpa': '9.5',
+		'name': 'Sagar', 'year': '1'},
+		{'branch': 'MCE', 'cgpa': '7.8',
+		'name': 'Prateek', 'year': '3'},
+		{'branch': 'EP', 'cgpa': '9.1',
+		'name': 'Sahil', 'year': '2'}]
+
+# field names
+fields = ['name', 'branch', 'year', 'cgpa']
+
+# name of csv file
+filename = "university_records.csv"
+
+# writing to csv file
+with open(filename, 'w', newline='') as csvfile:
+	# creating a csv dict writer object
+	writer = csv.DictWriter(csvfile, fieldnames=fields)
+
+	# writing headers (field names)
+	writer.writeheader()
+
+	# writing data rows
+	writer.writerows(mydict)
+
+
+
+
+Reading a CSV file
+Reading from a CSV file is done using the reader object. 
+The CSV file is opened as a text file with Python’s built-in open() function, which returns a file object. 
+In this example, we first open the CSV file in READ mode, file object is converted to csv.reader object and further operation takes place. 
+Code and detailed explanation is given below.
+
+# importing csv module
+import csv
+
+# csv file name
+filename = "university_records.csv"
+
+# initializing the titles and rows list
+fields = []
+rows = []
+
+# reading csv file
+with open(filename, 'r') as csvfile:
+	# creating a csv reader object
+	csvreader = csv.reader(csvfile)
+
+	# extracting field names through first row
+	fields = next(csvreader)
+
+	# extracting each data row one by one
+	for row in csvreader:
+		rows.append(row)
+
+	# get total number of rows
+	print("Total no. of rows: %d" % (csvreader.line_num))
+
+# printing the field names
+print('Field names are:' + ', '.join(field for field in fields))
+
+# printing first 5 rows
+print('\nFirst 5 rows are:\n')
+for row in rows[:5]:
+	# parsing each column of a row
+	for col in row:
+		print("%10s" % col, end=" "),
+	print('\n')
+
+
+
+
+a file operation can be done in the following order.
+
+1. Open a file
+2. Read or write - Performing operation
+3. Close the file
+
+Different Modes to Open a File in Python
+
+Mode	Description
+r	Open a file in reading mode (default)
+w	Open a file in writing mode
+x	Open a file for exclusive creation 
+a	Open a file in appending mode (adds content at the end of the file)
+t	Open a file in text mode (default)
+b	Open a file in binary mode
++	Open a file in both read and write mode
+
+Here is the complete list of methods in text mode with a brief description:
+
+Method				Description
+close()				Closes an opened file
+read(n)				Reads the file content
+seek(offset,from=SEEK_SET)	Changes the file position to offset bytes, in reference to from (start, current, end)
+tell()				Returns an integer that represents the current position of the file's object
+write(s)			Writes a string to the file 
+writelines(lines)		Writes a list of lines to the file
+
+
+https://www.freecodecamp.org/news/file-handling-in-python/
