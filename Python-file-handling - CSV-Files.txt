@@ -121,6 +121,35 @@ for row in rows[:5]:
 
 
 
+Reading CSV Files Into a Dictionary With csv
+We can read a CSV file into a dictionary using the csv module in Python and the csv.DictReader class. 
+In this example, csv.DictReader reads each row of the CSV file as a dictionary where the keys are the column headers, and the values are the corresponding values in each row.
+ The dictionaries are then appended to a list (data_list in this case).
+
+
+
+import csv
+
+# Open the CSV file for reading
+with open('university_records.csv', mode='r') as file:
+	# Create a CSV reader with DictReader
+	csv_reader = csv.DictReader(file)
+
+	# Initialize an empty list to store the dictionaries
+	data_list = []
+
+	# Iterate through each row in the CSV file
+	for row in csv_reader:
+		# Append each row (as a dictionary) to the list
+		data_list.append(row)
+
+# Print the list of dictionaries
+for data in data_list:
+	print(data)
+
+
+
+
 
 a file operation can be done in the following order.
 
