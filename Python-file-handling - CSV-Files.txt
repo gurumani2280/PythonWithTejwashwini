@@ -1,3 +1,28 @@
+CSV stands for Comma Separated Values. 
+A CSV file stores tabular data (numbers and text) in plain text,
+ where each line of the file typically represents one data record
+
+
+When iterating over an object returned from csv.reader(), what is returned with each iteration?
+
+For example, given the following code block that assumes csv_reader is an object returned from csv.reader(), what would be printed to the console with each iteration?
+
+Question 1:
+What CSV stands for? comma - separated values.
+
+Question 2:
+csv.reader() method will read entire file content (in list of list format [[], []]), including the first line.  True
+
+Question 3:
+Python open() method open file in write mode by default? False
+
+Question 6:
+Which of the following method can be used to write the CSV file?
+csv.writer()
+
+Question 5:
+writerow() method takes a list as input.
+
 https://www.geeksforgeeks.org/reading-and-writing-csv-files-in-python/
 https://realpython.com/python-csv/
 https://docs.python.org/3/library/csv.html

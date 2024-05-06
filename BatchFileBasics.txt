@@ -1,0 +1,11 @@
+https://stackoverflow.com/questions/1458636/how-to-do-press-enter-to-exit-in-batch
+
+
+https://stackoverflow.com/questions/47425520/activate-virtualenv-and-run-py-script-from-bat
+
+
+https://gist.github.com/nmpowell/d444820b58f10568b15a082ee4f591cf
+
+
+
+https://www.tutorialspoint.com/batch_script/index.htm

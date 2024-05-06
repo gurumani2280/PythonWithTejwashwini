@@ -1,0 +1,116 @@
+https://www.programiz.com/python-programming/json
+https://www.geeksforgeeks.org/reading-and-writing-json-to-a-file-in-python/
+
+JSON (JavaScript Object Notation) is a popular data format used for representing structured data. 
+It's common to transmit and receive data between a server and web application in JSON format.
+
+Simple Python objects are translated to JSON according to a fairly intuitive conversion.
+
+Python			JSON
+dict			object
+list, tuple		array
+str			string
+int, float		number
+True			true
+False			false
+None			null
+
+
+Python Convert to JSON string - convert a dictionary to JSON string using json.dumps() method
+
+Example : Convert python obect to JSON string 
+
+import json
+person_dict = {'name': 'Bob', 'age': 12, 'married': False, 'children': None, 'car' : None, 'student':True}
+#person_dict = {'name': 'Bob', 'age': 42, 'married': True, 'children': ['sonu','tonu'], 'car': ('swift', 'wagonR'),  'student':False}
+person_json_str = json.dumps(person_dict)
+print(person_json_str) # {"name": "Bob", "age": 12, "married": false, "children": null, "car": null, "student": true}
+#{"name": "Bob", "age": 42, "married": true, "children": ["sonu", "tonu"], "car": ["swift", "wagonR"], "student": false}
+
+number_list = [1, 2, 3]
+number_list_str = json.dumps(number_list)
+print(number_list_str) # [1, 2, 3]
+
+number_tuple = (1, 5, 3)
+number_tuple_str = json.dumps(number_tuple)
+print(number_tuple_str) #[1, 5, 3]
+
+number = 12
+number_str = json.dumps(number)
+print(number_str) # 12
+
+name = 'emexo'
+name_str = json.dumps(name)
+print(name_str) # "emexo"
+
+bool1 = True
+bool1_str = json.dumps(bool1)
+print(bool1_str)#true
+
+bool2 = False
+bool2_str = json.dumps(bool2)
+print(bool2_str) #false
+
+none1 = None
+none1_str = json.dumps(none1)
+print(none1_str) #null
+
+===============-----------------===================--------------
+
+Example : Convert python obect to JSON file
+import json
+
+person_dict = {'name': 'Bob', 'age': 12, 'married': False, 'children': None, 'car' : None, 'student':True}
+with open(file='dict1.json', mode='w') as file1:
+    json.dump(person_dict, file1)
+
+number_list = [1, 2, 3]
+with open(file='list1.json', mode='w') as file2:
+    json.dump(number_list, file2)
+
+number_tuple = (1, 5, 3)
+with open(file='tuple1.json', mode='w') as file3:
+    json.dump(number_tuple, file3)
+
+number = 12
+with open(file='number1.json', mode='w') as file4:
+    json.dump(number, file4)
+
+name = 'emexo'
+with open(file='name1.json', mode='w') as file5:
+    json.dump(name, file5)
+
+bool1 = True
+with open(file='bool1.json', mode='w') as file6:
+    json.dump(bool1, file6)
+
+bool2 = False
+with open(file='bool2.json', mode='w') as file7:
+    json.dump(bool2, file7)
+
+none1 = None
+with open(file='none1.json', mode='w') as file8:
+    json.dump(none1, file8) 
+
+===============-----------------===================--------------
+Parse JSON in Python
+The json module makes it easy to parse JSON strings and files containing JSON object.
+
+Example 1: Python JSON to dict  --  can parse a JSON string using json.loads() method. 
+The method returns a dictionary.
+
+import json
+person = '{"name": "emexo", "languages": ["java", "python"]}'
+person_dict = json.loads(person)
+print(person_dict)
+print(person_dict['languages'])
+
+
+Example 2: Python read JSON file  --  can use json.load() method to read a file containing JSON object.
+
+import json
+
+with open('path_to_file/person.json', 'r') as f:
+  data = json.load(f)
+
+print("python dict from json file ", data)

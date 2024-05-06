@@ -1,0 +1,128 @@
+https://www.geeksforgeeks.org/working-with-excel-spreadsheets-in-python/
+https://www.knowledgehut.com/blog/programming/how-to-work-with-excel-using-python
+https://realpython.com/openpyxl-excel-spreadsheets-python/
+ 
+
+pip install openpyxl
+
+PermissionError: [Errno 13] Permission denied: 'HelloWorld.xlsx'
+will get this error while writing to excel, if excel file is already open
+
+Python Write Excel File
+
+First, let’s create a new spreadsheet, and then we will write some data to the newly created file. 
+An empty spreadsheet can be created using the Workbook() method. Let’s see the below example.
+In this example, a new blank Excel workbook is generated using the openpyxl library’s Workbook() function,
+ and it is saved as “empty.xlsx” with the save() method.
+
+from openpyxl import Workbook
+filename="empty.xlsx"
+workbook = Workbook()
+workbook.save(filename=filename)
+print(f"{filename} created successfully")
+
+
+After creating an empty file, let’s see how to add some data to it using Python.
+To add data first we need to select the active sheet and then using the cell() method 
+we can select any particular cell by passing the row and column number as its parameter. 
+We can also write using cell names. See the below example for a better understanding.
+
+
+from openpyxl import Workbook
+filename="HelloWorld.xlsx"
+workbook = Workbook()
+spreadsheet = workbook.active
+print("spreadsheet title ", spreadsheet.title)
+
+spreadsheet["A1"] = "Hello"
+spreadsheet["B1"] = "World!"
+
+c1 = spreadsheet.cell(row=2, column=1)
+c1.value = "Welcome"
+c2 = spreadsheet.cell(row=2, column=2)
+c2.value = "Everyone"
+
+workbook.save(filename=filename)
+print(f"{filename} created successfully")
+
+
+Append data in excel using Python
+In the above example, you will see that every time you try to write to a spreadsheet the existing data gets overwritten,
+ and the file is saved as a new file.
+ This happens because the Workbook() method always creates a new workbook file object.
+ To write to an existing workbook you must open the file with the load_workbook() method.
+ We will use the above-created workbook.
+
+
+
+from openpyxl import load_workbook
+filename="HelloWorld.xlsx"
+workbook = load_workbook(filename=filename)
+sheet = workbook.active
+
+c = sheet['A3']
+c.value = "New Data 3th row"
+
+sheet.append(["new Data1", "new Data2"])
+
+workbook.save(filename = filename)
+print(f"{filename} updated with new data")
+
+
+We can also use the append() method to append multiple data at the end of the sheet.
+
+
+Read an Excel File in Python
+
+To read an Excel file you have to open the spreadsheet using the load_workbook() method. 
+After that, you can use the active to select the first sheet available 
+and the cell attribute to select the cell by passing the row and column parameter. 
+The value attribute prints the value of the particular cell. See the below example to get a better understanding. 
+
+
+
+from openpyxl import load_workbook
+filename="HelloWorld.xlsx"
+workbook = load_workbook(filename=filename)
+print(workbook.sheetnames)
+sheet = workbook.active
+print("active sheet title ",sheet.title)
+
+print("max row which have data - ", sheet.max_row )
+print("max column which have data - ", sheet.max_column )
+
+cell11 = sheet.cell(row=1, column=1)
+print("data in cell 1,1 - ",cell11.value)
+
+cell_a2 = sheet["A2"]
+print("data in cell A2 -",cell_a2.value)
+
+all_cell_a_column = sheet["A"]
+print("printing all A column values")
+for cell in all_cell_a_column:
+    print(cell.value)
+
+
+all_cell_b_column = sheet["B"]
+print("printing all B column values")
+for cell in all_cell_b_column:
+    print(cell.value)
+
+print("printing all row and column values")
+for row_value in sheet.iter_rows(min_row=1, max_row=sheet.max_row, min_col=1,max_col=sheet.max_column, values_only=True):
+    print(row_value)
+
+print("printing all column and column values")
+for column_value in sheet.iter_cols(min_row=1, max_row=sheet.max_row, min_col=1,max_col=sheet.max_column, values_only=True):
+    print(column_value)
+
+print(f"{filename} reading done !")
+
+
+
+
+
+
+
+
+
