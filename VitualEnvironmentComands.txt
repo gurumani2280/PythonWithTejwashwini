@@ -3,6 +3,7 @@ how to maintain versions - and how to ensure your felloprogrammer also uses same
 isolated environment, which is different from global environment
 
 1. create venv -> python -m venv myenv
+command to activate virtual environmnet through cmd prompt- first go to the framework directory and then give- call .\venv\Scripts\activate.bat
 2. change dir  -> cd myenv/Scripts
 3. activate venv -> \Proj2\myenv\Scripts>activate.bat
 	C:\Users\App1>.\venv\Scripts\activate
