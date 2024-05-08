@@ -39,7 +39,32 @@ Enter credentials--
  add plugins
 
 
-3. Add plugins
+
+3. create free style project
+Configuration -> Advanced -> Use custom workspace - > Directory -- > provide location of framework
+Build Steps -> Execute Windows batch command - > Command --> enter all the batch commands to be executed 
+
+
+4. adding parameter
+
+General -> This project is parameterised
+add parameter  - > Choice Parameter  -> Name -> Choices -- provide here all the options
+
+The name of the parameters should be a plain name, preferably without spaces, like Branch. Do not add any ${} or %% to definition of the parameter name.
+In the build steps, like Execute Windows Batch Command, you can reference the parameter with regular batch syntax, like %Branch%.
+
+https://stackoverflow.com/questions/24429976/pass-parameter-from-jenkins-parameterized-build-to-windows-batch-command
+
+If you would be on a *nix machine, you would use Execute shell build step and reference the parameter with regular bash syntax, like ${Branch}
+${suiteXmlFile}
+
+clean test -DsuiteXmlFile
+
+clean test -DsuiteXmlFile=$testngxml
+
+
+
+5. Add plugins
 
  Jenkin -- Manage Jenkins --> Manage Plugins-- Available plugin -- 
 
@@ -50,22 +75,16 @@ Publish TestNg Result --- in Post -BUild Actions of the COnfigure
 
 And also Publish HTML report
 
-4. create free style project
+search - junit   -- 'Allows JUnit-format test results to be published.'
+install without restart
+--junitxml=result.xml
 
-5. configure project to run periodically 
+in configure -> BUild Actions -> JUnit-format test results
+
+6. configure project to run periodically 
 BuildTriggers->Build Periodically
 
 */2 * * * *
 
 https://stackoverflow.com/questions/12472645/how-do-i-schedule-jobs-in-jenkins
 
-6. adding parameter
-
-This project is parameterised
-add parameter
-
-${suiteXmlFile}
-
-clean test -DsuiteXmlFile
-
-clean test -DsuiteXmlFile=$testngxml
